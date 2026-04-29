@@ -49,11 +49,11 @@ a{color:inherit;text-decoration:none}
 }
 
 .header__inner{
-  min-height:78px;
+  min-height:92px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:28px;
 }
 
 .brand{
@@ -62,25 +62,29 @@ a{color:inherit;text-decoration:none}
   gap:4px;
 }
 .brand__name{
-  font-size:18px;
-  font-weight:600;
+  font-size:37px;
+  line-height:1;
+  letter-spacing:.01em;
+  font-weight:500;
 }
 .brand__role{
-  font-size:13px;
-  color:var(--muted);
+  font-size:19px;
+  color:#8c92a0;
 }
 
 .nav{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:26px;
   flex-wrap:wrap;
+  margin-left:auto;
 }
 .nav__link{
-  padding:9px 14px;
+  padding:10px 18px;
   border-radius:999px;
-  color:#444d5a;
-  font-size:15px;
+  color:#444;
+  font-size:30px;
+  line-height:1;
 }
 .nav__link:hover{
   background:var(--surface-soft);
@@ -88,55 +92,83 @@ a{color:inherit;text-decoration:none}
 .nav__link--cta{
   background:var(--accent);
   color:#fff;
+  font-size:20px;
+  padding:20px 36px;
 }
 .nav__link--cta:hover{
   background:var(--accent-dark);
 }
 
 .hero{
-  padding:64px 0 44px;
+  padding:72px 0 44px;
 }
 .hero__grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
+  grid-template-columns:1fr 1fr;
   align-items:start;
-  gap:28px;
+  gap:46px;
 }
-
-.kicker{
+.hero__intro{
   margin:0;
-  display:inline-block;
-  padding:8px 14px;
-  border-radius:999px;
-  background:#e8edf6;
-  color:#6f7d93;
-  font-size:13px;
-  letter-spacing:.02em;
+  color:#a0a4af;
+  font-size:56px;
+  line-height:1.22;
+  max-width:540px;
 }
 
 .hero__title{
-  margin:18px 0 16px;
-  font-size:clamp(40px,5.2vw,76px);
-  line-height:.95;
-  font-weight:500;
+  margin:28px 0 24px;
+  font-size:clamp(72px,5.5vw,118px);
+  line-height:.97;
+  font-weight:400;
+  letter-spacing:-.01em;
 }
 .hero__title-accent{
   display:block;
-  color:#000;
+  color:#2a2a2a;
 }
 .hero__lead{
   margin:0;
-  font-size:19px;
-  line-height:1.5;
-  color:#4f5866;
-  max-width:760px;
+  font-size:39px;
+  line-height:1.45;
+  color:#767f90;
+  max-width:840px;
 }
 
-.hero__actions{
-  margin-top:24px;
+.hero__visual{
+  position:relative;
+  width:100%;
+  max-width:740px;
+  margin-left:auto;
+}
+.hero__photo{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  filter:grayscale(100%);
+}
+.hero__contact-pill{
+  position:absolute;
+  left:-40px;
+  bottom:36px;
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  background:#a0b2c8;
+  color:#2f3848;
   display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  line-height:1;
+}
+.hero__line{
+  position:absolute;
+  right:-16px;
+  bottom:-50px;
+  width:270px;
+  height:60px;
 }
 
 .btn{
@@ -165,31 +197,6 @@ a{color:inherit;text-decoration:none}
   background:#f4f6fb;
 }
 .btn--wide{width:100%}
-
-.hero__meta{
-  margin-top:24px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.meta-pill{
-  padding:10px 14px;
-  border-radius:16px;
-  border:1px solid var(--line);
-  background:#fff;
-}
-.meta-pill__label{
-  display:block;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:11px;
-  color:#7b8699;
-}
-.meta-pill__value{
-  display:block;
-  margin-top:2px;
-  font-size:14px;
-  color:#364052;
-}
 
 .card{
   background:#fff;
@@ -379,14 +386,26 @@ a{color:inherit;text-decoration:none}
   .signup{grid-template-columns:1fr}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .section__title{font-size:36px}
+  .brand__name{font-size:24px}
+  .brand__role{font-size:14px}
+  .nav{gap:10px}
+  .nav__link{font-size:16px;padding:8px 12px}
+  .nav__link--cta{font-size:14px;padding:10px 14px}
+  .hero__intro{font-size:34px}
+  .hero__title{font-size:64px}
+  .hero__lead{font-size:24px}
+  .hero__visual{max-width:100%}
+  .hero__contact-pill{left:10px;bottom:10px;width:110px;height:110px;font-size:22px}
+  .hero__line{display:none}
 }
 
 @media (max-width: 640px){
   .container{width:min(1180px, calc(100% - 28px))}
   .nav{display:none}
   .hero{padding:40px 0 30px}
-  .hero__title{font-size:44px}
-  .hero__lead{font-size:17px}
+  .hero__intro{font-size:24px}
+  .hero__title{font-size:46px}
+  .hero__lead{font-size:18px}
   .section{padding:44px 0}
   .section__title{font-size:30px}
   .section__subtitle{font-size:16px}
