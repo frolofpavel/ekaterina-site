@@ -386,11 +386,20 @@
           var fd = new FormData(form);
           var name = String(fd.get("name") || "").trim();
           var phone = String(fd.get("phone") || "").trim();
+
+          // 1. Открыть Telegram (как было)
           var text =
             "Здравствуйте! Хочу записаться на ознакомительную первую сессию.%0A" +
             (name ? "Имя: " + encodeURIComponent(name) + "%0A" : "") +
             (phone ? "Телефон: " + encodeURIComponent(phone) + "%0A" : "");
           window.open("https://t.me/+79612287289?text=" + text, "_blank", "noopener");
+
+          // 2. Отправить email-уведомление
+          fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: name, phone: phone }),
+          }).catch(function () { /* тихо, не мешаем пользователю */ });
         });
       })();
     </script>
