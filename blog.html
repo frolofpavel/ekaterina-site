@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Блог — Екатерина Фролова</title>
-    <meta name="description" content="Материалы о психоанализе, групповой психотерапии и практике консультаций." />
+    <title>Блог психолога — Екатерина Фролова, Новосибирск</title>
+    <meta
+      name="description"
+      content="Статьи о психоанализе, групповой терапии и подготовке к первой консультации. Психолог Екатерина Фролова, Новосибирск."
+    />
+    <meta name="robots" content="index, follow" />
 
     <link rel="canonical" href="https://xn----7sbanvcabqhfqljbckzlp0dn.xn--p1ai/blog.html" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
     <meta property="og:title" content="Блог — Екатерина Фролова" />
-    <meta property="og:description" content="Материалы о психоанализе, групповой психотерапии и практике консультаций." />
+    <meta
+      property="og:description"
+      content="Статьи о психоанализе, групповой терапии и подготовке к первой консультации."
+    />
     <meta property="og:url" content="https://xn----7sbanvcabqhfqljbckzlp0dn.xn--p1ai/blog.html" />
 
     <meta name="twitter:card" content="summary" />
@@ -20,19 +28,37 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://xn----7sbanvcabqhfqljbckzlp0dn.xn--p1ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Блог",
+            "item": "https://xn----7sbanvcabqhfqljbckzlp0dn.xn--p1ai/blog.html"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#content">Перейти к содержимому</a>
 
     <header class="header">
       <div class="container header__inner">
-        <a class="brand" href="/" aria-label="На главную">
+        <a class="brand" href="/">
           <span class="brand__role">Психолог</span>
           <span class="brand__name">ЕКАТЕРИНА ФРОЛОВА</span>
         </a>
@@ -41,7 +67,7 @@
           <a class="nav__link" href="/">Главная</a>
           <a class="nav__link nav__link--active" aria-current="page" href="/blog.html">Блог</a>
           <a class="nav__link" href="/contacts.html">Контакты</a>
-          <a class="nav__link nav__link--cta" href="https://t.me/+79612287289" target="_blank" rel="noreferrer">Напишите мне в Telegram</a>
+          <a class="nav__link nav__link--cta" href="https://t.me/+79612287289" target="_blank" rel="noopener noreferrer">Напишите в Telegram</a>
         </nav>
       </div>
     </header>
@@ -49,18 +75,15 @@
     <main id="content" class="page">
       <section class="section">
         <div class="container">
-          <p class="page__kicker">// блог</p>
-          <h1 class="page__title">Скоро здесь появятся материалы</h1>
+          <h1 class="page__title">Блог</h1>
           <p class="page__lead">
-            Пока сайт переносится с Tilda, я соберу сюда короткие заметки: как устроена терапия, что ожидать на первой встрече,
-            ответы на частые вопросы — без магии и «инфоцыганства».
+            Здесь будут короткие тексты: как устроена терапия, чего ждать от первой встречи, ответы на частые вопросы о
+            группах и личных консультациях.
           </p>
-          <p class="page__text">
-            Если нужна запись прямо сейчас — напишите в Telegram, я отвечу и предложу удобное время.
-          </p>
+          <p class="page__text">Пока раздел готовится. Если нужна запись — напишите в Telegram.</p>
           <div class="page__actions">
-            <a class="btn btn--primary" href="https://t.me/+79612287289" target="_blank" rel="noreferrer">Написать в Telegram</a>
-            <a class="btn btn--ghost" href="/#signup">Вернуться к форме записи</a>
+            <a class="btn btn--primary" href="https://t.me/+79612287289" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+            <a class="btn btn--ghost" href="/#signup">Форма записи на главной</a>
           </div>
         </div>
       </section>
@@ -68,8 +91,13 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <p class="footer__copy">© <span id="year"></span> Все права защищены.</p>
-        <a class="footer__link" href="https://t.me/+79612287289" target="_blank" rel="noreferrer">Telegram</a>
+        <p class="footer__copy">© <span id="year"></span> Екатерина Фролова · психолог, Новосибирск</p>
+        <nav class="footer__nav" aria-label="Подвал">
+          <a href="/">Главная</a>
+          <a href="/blog.html">Блог</a>
+          <a href="/contacts.html">Контакты</a>
+          <a href="https://t.me/+79612287289" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </nav>
       </div>
     </footer>
 
